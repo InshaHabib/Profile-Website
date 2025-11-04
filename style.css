@@ -1,0 +1,208 @@
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #6366f1;
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+    --bg-light: #f9fafb;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+}
+
+header h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header .lead {
+    color: #f3f4f6;
+    font-size: 1.1rem;
+}
+
+.profile-card {
+    border: none;
+    border-radius: 20px;
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.profile-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border: 5px solid var(--primary-color);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 2rem;
+    color: var(--text-dark);
+}
+
+.profession {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.social-links {
+    margin-top: 1.5rem;
+}
+
+.social-links .btn {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links .btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.education-section {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.education-section .card-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.education-section .card-header h3 {
+    font-size: 1.5rem;
+}
+
+.education-table {
+    margin-bottom: 0;
+}
+
+.education-table thead {
+    background-color: var(--bg-light);
+}
+
+.education-table thead th {
+    color: var(--text-dark);
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+    padding: 1rem;
+}
+
+.education-table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    color: var(--text-dark);
+}
+
+.education-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.education-table tbody tr:hover {
+    background-color: rgba(79, 70, 229, 0.05);
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #ffffff !important;
+}
+
+.contact-info {
+    color: #f3f4f6 !important;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .profession {
+        font-size: 1rem;
+    }
+
+    .education-table {
+        font-size: 0.9rem;
+    }
+
+    .education-table thead th,
+    .education-table tbody td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .profile-card .card-body {
+        padding: 2rem 1.5rem !important;
+    }
+
+    .education-section .card-body {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .education-table {
+        font-size: 0.85rem;
+    }
+
+    .contact-info {
+        font-size: 0.8rem;
+    }
+}
